@@ -31,9 +31,9 @@ if (!function_exists('is_wpcodev')) {
 	}
 }
 
-function check_wpcodev_banners($name){
+function check_wpcodev_basli($name){
 	if (! is_wpcodev()) {
-		echo '<div id="message" class="error">Banners need WP-Codev installed and active to work</div>';
+		echo '<div id="message" class="error">Banners Slides need WP-Codev installed and active to work</div>';
 	}
 }
 
@@ -42,9 +42,9 @@ function check_wpcodev_banners($name){
  * 
  * @return void
  */
-function banners_activate(){
-	include_once dirname(__FILE__) . '/class/bannersInstall.php';
-	$install = new bannersInstall();
+function basli_activate(){
+	include_once dirname(__FILE__) . '/class/basliInstall.php';
+	$install = new basliInstall();
 	$install->activate();
 	unset($install);
 }
@@ -54,9 +54,9 @@ function banners_activate(){
  * 
  * @return void
  */
-function banners_deactivate(){
-	include_once dirname(__FILE__) . '/class/bannersInstall.php';
-	$install = new bannersInstall();
+function basli_deactivate(){
+	include_once dirname(__FILE__) . '/class/basliInstall.php';
+	$install = new basliInstall();
 	$install->deactivate();
 	unset($install);
 }
@@ -87,30 +87,30 @@ function basli_menu() {
 /**
  * Do all the magic
  */
-include_once dirname(__FILE__) . '/class/bannersCore.php';
+include_once dirname(__FILE__) . '/class/basliCore.php';
 
 if (is_wpcodev()) {
 	if (is_admin()) {
 		add_action('admin_menu', 'basli_menu');
-		wp_enqueue_style( 'banner-aquit', plugin_dir_url(__FILE__).'admin/admin.css', null, null);
+		wp_enqueue_style( 'basli', plugin_dir_url(__FILE__).'admin/admin.css', null, null);
 	} else {
-		include_once dirname(__FILE__) . '/class/bannersFrontend.php';
-		$frontend = new bannersFrontend();
+		include_once dirname(__FILE__) . '/class/basliFrontend.php';
+		$frontend = new basliFrontend();
 		$frontend->add_css();
 	}
 }
 
 /**
- * call banner.html and include it
+ * call basli.html and include it
  * 
  * @return void
  */
 function show_banner(){
-	include_once dirname(__FILE__) . '/class/bannersFrontend.php';
-	$frontend = new bannersFrontend();
+	include_once dirname(__FILE__) . '/class/basliFrontend.php';
+	$frontend = new basliFrontend();
 	$frontend->show_banner();
 }
 
 //register_activation_hook(__FILE__ , 'banners_activate' );
 //register_deactivation_hook(__FILE__, 'banners_deactivate');
-add_action('admin_notices', 'check_wpcodev_banners');
+add_action('admin_notices', 'check_wpcodev_basli');

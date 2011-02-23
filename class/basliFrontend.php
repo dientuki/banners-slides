@@ -1,5 +1,5 @@
 <?php
-class bannersFrontend extends bannersCore{
+class basliFrontend extends basliCore{
 	
 	/**
 	 * The constructor

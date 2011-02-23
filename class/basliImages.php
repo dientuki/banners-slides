@@ -1,5 +1,5 @@
 <?php
-class bannersImages extends bannersBackend {
+class basliImages extends basliBackend {
 
 	private $wpdb = null;
 	

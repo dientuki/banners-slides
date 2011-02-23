@@ -1,5 +1,5 @@
 <?php
-class bannersAnimation extends bannersBackend {
+class basliAnimation extends basliBackend {
 
 	/**
 	 * The constructor

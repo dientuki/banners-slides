@@ -1,5 +1,5 @@
 <?php
-abstract class bannersCore{
+abstract class basliCore{
 	
 	/**
 	 * Plugin's url

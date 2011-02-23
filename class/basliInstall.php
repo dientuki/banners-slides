@@ -1,5 +1,5 @@
 <?php
-class bannersInstall extends bannersCore{	
+class basliInstall extends basliCore{	
 	
 	/**
 	 * The wpdb object

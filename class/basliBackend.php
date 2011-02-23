@@ -1,5 +1,5 @@
 <?php
-class bannersBackend extends bannersCore{
+class basliBackend extends basliCore{
 	
 	protected $error = null;
 	

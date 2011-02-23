@@ -164,7 +164,9 @@ class basliInstall extends basliCore{
 		$this->basic['crop'] = 1;
 		$this->basic['overwrite'] = 0;
 		$this->basic['delete'] = 1;
-		$this->basic['cycle'] = 'cycle.lite';		
+		$this->basic['cycle'] = 'cycle.lite';
+
+		$this->options = array();
 	}
 	
 	/**

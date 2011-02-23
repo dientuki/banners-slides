@@ -19,7 +19,7 @@ abstract class basliCore{
 	/**
 	 * Banner's filename
 	 */	
-	protected $banners_filename = 'banner.html';
+	protected $banners_filename = 'basli.html';
 	
 	/**
 	 * Custom js' filename
@@ -54,11 +54,17 @@ abstract class basliCore{
 	/**
 	 * The options' name
 	 */	
+	protected $options = null;
+	
+	protected $options_name = 'opt_basli';
+	
+	
+	/*
 	protected $opt_use = 'aquit_banner_use';
 	protected $opt_custom_js = 'aquit_banner_custom_js';
 	protected $opt_img_size = 'aquit_banner_size';
 	protected $opt_basic = 'aquit_banner_basic';
-	
+	*/
 	/**
 	 * Table name
 	 */		
